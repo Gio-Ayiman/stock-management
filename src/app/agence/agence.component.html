@@ -1,12 +1,16 @@
-<div class="container">
+<div class="container mt-3">
     <div class="card">
         <div class="container">
             <p-table #dt [value]="agences" [rows]="10" [columns]="columns"
                 [paginator]="true" [rowsPerPageOptions]="[10, 25, 50]"
                 selectionMode="single" [showFirstLastIcon]="false">
                 <ng-template pTemplate="caption">
+                    <div class="row">
+                        <h2>Agences</h2>
+                    </div>
+                    <hr>
                     <div class="d-flex align-items-center justify-content-between">
-                        <button pButton pRipple label="Ajouter" icon="pi pi-plus" class="p-button-success mr-2" (click)="new()"></button>
+                        <button pButton  label="Ajouter" icon="pi pi-plus" class="p-button-success mr-2" (click)="new()"></button>
                         <span class="p-input-icon-left">
                             <i class="pi pi-search"></i>
                             <input pInputText type="text" placeholder="Recherchez..." />
